@@ -190,7 +190,7 @@ closePrivateMessageModal(){
           <div id="submit-messages">
           <form onSubmit={this.handleSubmit}>
             <input value={newMessage} onChange={(e)=> this.handleChange(e, 'message')} placeholder="new message" />
-            <input type="submit" value="Send To All"/>
+            <input disabled={ newMessage.length < 1 } type="submit" value="Send To All"/>
           </form>
           <button onClick={()=> this.openPrivateMessageModal()}> Send Private Message</button>
 
